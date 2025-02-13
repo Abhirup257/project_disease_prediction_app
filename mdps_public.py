@@ -158,10 +158,7 @@ if (selected == 'Heart Disease Prediction'):
     thal = int(thal)
 
     # Prepare input data
-    input_data = [[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]]
-
-    # Make prediction
-    heart_prediction = heart_disease_model.predict(input_data)
+  heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])
       
         if (heart_prediction[0] == 1):
           heart_diagnosis = 'The person is having heart disease'
