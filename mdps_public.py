@@ -140,7 +140,7 @@ if (selected == 'Heart Disease Prediction'):
     
     # creating a button for Prediction
     
-    if st.button('Heart Disease Test Result'):
+    if st.button('Heart Disease Test Result'):    
     # Convert inputs to appropriate types
     age = float(age)
     sex = int(sex)
