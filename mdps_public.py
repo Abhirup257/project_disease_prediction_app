@@ -336,11 +336,7 @@ if selected == 'Kidney Disease Prediction':
         else:
             kindey_diagnosis = "The person does not have Kidney's disease"
     st.success(kindey_diagnosis)
-     except ValueError:
-            st.error("⚠️ Please enter valid numeric values for all fields.")
-
-
-
+     
 
 
 
