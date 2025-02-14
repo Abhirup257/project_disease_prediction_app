@@ -6,9 +6,7 @@ Created on Sun May  8 21:01:15 2022
 """
 
 import pickle
-from joblib import load
 import streamlit as st
-import os
 from streamlit_option_menu import option_menu
 
 
