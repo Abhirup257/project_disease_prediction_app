@@ -308,7 +308,7 @@ if selected == 'Kidney Disease Prediction':
 
     # creating a button for Prediction    
     if st.button("Kidney's Test Result"):
-    user_input = [age, blood_pressure, specific_gravity, albumin, sugar,
+        user_input = [age, blood_pressure, specific_gravity, albumin, sugar,
        red_blood_cells, pus_cell, pus_cell_clumps, bacteria,
        blood_glucose_random, blood_urea, serum_creatinine, sodium,
        potassium, haemoglobin, packed_cell_volume,
