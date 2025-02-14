@@ -7,6 +7,7 @@ Created on Sun May  8 21:01:15 2022
 
 import pickle
 import streamlit as st
+import os
 from streamlit_option_menu import option_menu
 
 
@@ -177,6 +178,7 @@ if (selected == "Parkinsons Prediction"):
         
     st.success(parkinsons_diagnosis)
 
+# heart disease Prediction Page
 if selected == 'Heart Disease Prediction':
     st.title("Heart Disease Prediction Using Machine Learning")
     col1, col2, col3  = st.columns(3)
