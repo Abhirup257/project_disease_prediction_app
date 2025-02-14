@@ -218,13 +218,24 @@ if selected == 'Heart Disease Prediction':
     heart_disease_result = ""
     if st.button("Heart Disease Test Result"):
         user_input = [age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
-        user_input = [float(x) for x in user_input]
-        prediction = heart.predict([user_input])
-        if prediction[0]==1:
-            heart_disease_result = "This person is having heart disease"
+        # Validate if all inputs are filled
+        if any(x.strip() == '' for x in user_input):  
+            st.error("⚠️ Please fill in all input fields before proceeding.")
         else:
-            heart_disease_result = "This person does not have any heart disease"
-    st.success(heart_disease_result)
+            try:
+                user_input = [float(x) for x in user_input]  # Convert inputs to float
+                prediction = heart.predict([user_input])  # Perform prediction
+                
+                if prediction[0] == 1:
+                    heart_disease_result = "This person is having heart disease"
+                else:
+                    heart_disease_result = "This person does not have any heart disease"
+                    
+                st.success(heart_disease_result)
+            except ValueError:
+                st.error("⚠️ Please enter valid numeric values for all fields.")
+
+
 
 if selected == 'Kidney Disease Prediction':
     
@@ -325,6 +336,8 @@ if selected == 'Kidney Disease Prediction':
         else:
             kindey_diagnosis = "The person does not have Kidney's disease"
     st.success(kindey_diagnosis)
+     except ValueError:
+            st.error("⚠️ Please enter valid numeric values for all fields.")
 
 
 
