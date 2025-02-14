@@ -20,7 +20,7 @@ diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
 
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
-heart = load(heart.pkl')
+heart = load('heart.pkl')
 
 kidney = load('kidney.pkl')
 
