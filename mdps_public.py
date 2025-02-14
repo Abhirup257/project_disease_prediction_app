@@ -6,6 +6,8 @@ Created on Sun May  8 21:01:15 2022
 """
 
 import pickle
+from sklearn.tree import DecisionTreeClassifier
+from joblib import load
 import streamlit as st
 import os
 from streamlit_option_menu import option_menu
@@ -18,9 +20,9 @@ diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
 
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
-heart = pickle.load(open('heart.pkl', 'rb'))
+heart = load(heart.pkl')
 
-kidney = pickle.load(open('kidney.pkl', 'rb'))
+kidney = load('kidney.pkl')
 
 # sidebar for navigation
 with st.sidebar:
