@@ -29,8 +29,8 @@ with st.sidebar:
                           
                           ['Diabetes Prediction',
                            'Parkinsons Prediction',
-                          'Heart Prediction',
-                          'kidney disease Prediction'],
+                          'Heart Disease Prediction',
+                          'kidney Disease Prediction'],
                           icons=['activity','person','heart','water'],
                           default_index=0)
     
