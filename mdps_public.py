@@ -219,7 +219,7 @@ if selected == 'Heart Disease Prediction':
     if st.button("Heart Disease Test Result"):
         user_input = [age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
         user_input = [float(x) for x in user_input]
-        prediction = heart_disease_model.predict([user_input])
+        prediction = heart.predict([user_input])
         if prediction[0]==1:
             heart_disease_result = "This person is having heart disease"
         else:
@@ -319,7 +319,7 @@ if selected == 'Kidney Disease Prediction':
 
         user_input = [float(x) for x in user_input]
 
-        prediction = kidney_disease_model.predict([user_input])
+        prediction = kidney.predict([user_input])
 
         if prediction[0] == 1:
             kindey_diagnosis = "The person has Kidney's disease"
